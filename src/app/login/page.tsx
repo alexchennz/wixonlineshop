@@ -15,7 +15,7 @@ enum MODE{
 export default function LoginPage() {
   const wixClient = useWixClient();
   const router = useRouter();
-  
+
   const [mode, setMode] = useState(MODE.LOGIN);
 
   const [username, setUsername] = useState("");
@@ -145,7 +145,7 @@ export default function LoginPage() {
         </button>
         {error && <div className="text-red-600">{error}</div>}
         {mode === MODE.LOGIN && (
-          <div className="text-sm underline cursor-pointer" onClick={() => setMode(MODE.REGISTER)}>Don't have an account?</div>
+          <div className="text-sm underline cursor-pointer" onClick={() => setMode(MODE.REGISTER)}>{"Don't"} have an account?</div>
         )}
         {mode === MODE.REGISTER && (
           <div className="text-sm underline cursor-pointer" onClick={() => setMode(MODE.LOGIN)}>Have an account?</div>

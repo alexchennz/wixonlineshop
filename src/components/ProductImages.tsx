@@ -38,9 +38,8 @@ export default function ProductImages({items}: {items: any}) {
         </div>
         <div className="flex justify-between gap-4 mt-8">
             {items.map((item: any, index: number) => (
-                <div className="w-1/4 h-32 relative gap-4 mt-8 cursor-pointer" onClick={() => setIndex(index)}>
+                <div className="w-1/4 h-32 relative gap-4 mt-8 cursor-pointer" onClick={() => setIndex(index)} key={item._id}>
                     <Image
-                        key={item._id!}
                         src={item.image.url}
                         alt="product"
                         fill

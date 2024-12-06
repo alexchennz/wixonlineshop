@@ -57,7 +57,7 @@ export default async function ProductList({categoryId, limit, searchParams}: {ca
     <div className="mt-12">
         <div className="flex flex-wrap gap-x-8 gap-y-16 sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {productList.items.map((product:products.Product) => (
-                <Link href={`/${product.slug}`} className="w-full flex flex-col gap-4" id={product._id}>
+                <Link href={`/${product.slug}`} className="w-full flex flex-col gap-4" key={product._id}>
             
                     <div className="relative w-full h-80">
                         <Image src={product.media?.mainMedia?.image?.url || 'product.png'} sizes='25vw' fill alt='' className='absolute rounded-md object-cover z-10 hover:opacity-0 ease transition-opacity duration-500'/>
