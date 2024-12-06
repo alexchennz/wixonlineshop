@@ -31,14 +31,12 @@ const HomePage = async () => {
       <div className="mt-24 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
         <h2 className="text-2xl">Featured Products</h2>
         <Suspense fallback={<div>Loading...</div>}>
-          {/* @ts-expect-error Async Server Component */}
           <ProductList categoryId={process.env.WIX_FEATURE_PRODUCT_CATEGORY_ID!} limit={4}/>
         </Suspense>
       </div>
       <div className="mt-24">
         <h2 className="text-2xl px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 mb-12">Categories</h2>
         <Suspense fallback={<div>Loading...</div>}>
-          {/* @ts-expect-error Async Server Component */}
           <CategoryList />
         </Suspense>
       </div>
